@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.douzhan.blog.mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="xyz.douzhan.blog.test.entity.User">
+        <id column="id" property="id" />
+        <result column="nickname" property="nickname" />
+        <result column="qq" property="qq" />
+        <result column="email" property="email" />
+        <result column="github" property="github" />
+        <result column="avatar" property="avatar" />
+        <result column="motto" property="motto" />
+        <result column="description" property="description" />
+    </resultMap>
+
+</mapper>

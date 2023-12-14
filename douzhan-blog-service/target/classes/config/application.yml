@@ -1,0 +1,42 @@
+server:
+  port: 8280
+spring:
+  application:
+    name: douzhan-blog
+  profiles:
+    active: dev
+    include: devDB,devCustom
+
+
+logging: # 日志
+  level:
+    xyz.douzhan: debug
+  pattern:
+    dateformat: HH:mm:ss:SSS
+  file:
+    path: "logs/${spring.application.name}"
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan:
+        - xyz.douzhan.service.controller
+  packages-to-scan:
+    - xyz.douzhan.service.controller
+  show-actuator: true
+# knife4j的增强配置，不需要增强可以不配
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+    enable-home-custom: true
+    home-custom-path: classpath:markdown/APIHome.md
+
+
