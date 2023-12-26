@@ -1,6 +1,7 @@
 package xyz.douzhan.blog.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 /**
  * Description:
@@ -9,7 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
  * @author 斗战圣洋
  * @since JDK 17
  */
-
+@Data
 public class LoginDto {
     @Schema(description = "用户名")
     private String username;

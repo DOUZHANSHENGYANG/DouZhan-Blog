@@ -13,9 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2023-12-14
  */
 public interface UserService extends IService<User> {
-    /**
-     * 登录
-     * @param loginDto
-     */
-    void loginAuth(LoginDto loginDto);
+
 }

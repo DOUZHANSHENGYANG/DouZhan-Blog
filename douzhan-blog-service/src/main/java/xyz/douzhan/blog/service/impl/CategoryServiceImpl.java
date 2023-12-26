@@ -1,7 +1,7 @@
 package xyz.douzhan.blog.service.impl;
 
+import xyz.douzhan.blog.po.Category;
 import xyz.douzhan.blog.service.CategoryService;
-import xyz.douzhan.blog.test.entity.Category;
 import xyz.douzhan.blog.mapper.CategoryMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

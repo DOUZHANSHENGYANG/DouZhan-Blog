@@ -1,1 +1,2 @@
 xyz.douzhan.blog.config.MybatisPlusConfig
+xyz.douzhan.blog.config.DruidDataSourceConfig

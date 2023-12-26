@@ -1,0 +1,12 @@
+blog:
+  mysql:
+    ip: 127.0.0.1
+    port: 3306
+    db: douzhan-blog
+    username: root
+    password: 1234
+  redis:
+    host: 192.168.202.129
+    port: 6379
+    db: 0
+    username: root

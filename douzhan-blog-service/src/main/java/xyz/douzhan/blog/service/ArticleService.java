@@ -1,6 +1,6 @@
 package xyz.douzhan.blog.service;
 
-import xyz.douzhan.blog.test.entity.Article;
+import xyz.douzhan.blog.po.Article;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

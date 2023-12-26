@@ -1,6 +1,6 @@
 package xyz.douzhan.blog.service.impl;
 
-import xyz.douzhan.blog.test.entity.Article;
+import xyz.douzhan.blog.po.Article;
 import xyz.douzhan.blog.mapper.ArticleMapper;
 import xyz.douzhan.blog.service.ArticleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

@@ -27,6 +27,7 @@
         <fastjson2.verison>2.0.41</fastjson2.verison>
         <druid.version>1.2.18</druid.version>
         <knife4j.version>4.3.0</knife4j.version>
+        <bcprov.version>1.76</bcprov.version>
     </properties>
 
     <dependencyManagement>
@@ -42,6 +43,11 @@
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15to18</artifactId>
+                <version>${bcprov.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba.fastjson2</groupId>

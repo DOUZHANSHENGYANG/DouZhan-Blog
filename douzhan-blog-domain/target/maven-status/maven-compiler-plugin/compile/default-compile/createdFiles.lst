@@ -1,1 +1,8 @@
+xyz\douzhan\blog\po\Article.class
+xyz\douzhan\blog\po\Category.class
+xyz\douzhan\blog\dto\LoginDto.class
+xyz\douzhan\blog\config\DruidDataSourceConfig.class
+xyz\douzhan\blog\dto\ResponseResult.class
+xyz\douzhan\blog\po\User.class
 xyz\douzhan\blog\config\MybatisPlusConfig.class
+xyz\douzhan\blog\po\ArticleCategory.class

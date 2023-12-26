@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -23,6 +24,7 @@ import java.io.Serializable;
 @Schema(description = "ArticleCategory对象")
 public class ArticleCategory implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Schema(description = "主键id")
@@ -30,10 +32,8 @@ public class ArticleCategory implements Serializable {
     private Integer id;
 
     @Schema(description = "分类id")
-    @TableId("category_id")
     private Integer categoryId;
 
     @Schema(description = "文章id")
-    @TableId("article_id")
     private Integer articleId;
 }

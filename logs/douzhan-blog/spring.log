@@ -1,173 +1,113 @@
-11:02:11:505  INFO 12880 --- [main] xyz.douzhan.blog.BlogApplication      : Starting BlogApplication using Java 17.0.7 with PID 12880 (D:\Programming\Project\Java\douzhan-blog\douzhan-blog-service\target\classes started by Chang in D:\Programming\Project\Java\douzhan-blog)
-11:02:11:506 DEBUG 12880 --- [main] xyz.douzhan.blog.BlogApplication      : Running with Spring Boot v3.0.13, Spring v6.0.14
-11:02:11:507  INFO 12880 --- [main] xyz.douzhan.blog.BlogApplication      : The following 3 profiles are active: "devDB", "devCustom", "dev"
-11:02:12:154  WARN 12880 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[xyz.douzhan.blog]' package. Please check your configuration.
-11:02:12:438  INFO 12880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8280 (http)
-11:02:12:445  INFO 12880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-11:02:12:445  INFO 12880 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-11:02:12:504  INFO 12880 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-11:02:12:505  INFO 12880 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 970 ms
-11:02:12:744  INFO 12880 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-11:02:13:379  INFO 12880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8280 (http) with context path ''
-11:02:13:388  INFO 12880 --- [main] xyz.douzhan.blog.BlogApplication      : Started BlogApplication in 2.208 seconds (process running for 2.667)
-11:02:13:523  INFO 12880 --- [RMI TCP Connection(3)-10.4.37.55] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-11:02:13:523  INFO 12880 --- [RMI TCP Connection(3)-10.4.37.55] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-11:02:13:523  INFO 12880 --- [RMI TCP Connection(2)-10.4.37.55] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-11:02:13:524  INFO 12880 --- [RMI TCP Connection(3)-10.4.37.55] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-11:02:14:723 ERROR 12880 --- [RMI TCP Connection(2)-10.4.37.55] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+00:02:36:613 ERROR 7684 --- [http-nio-8888-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
 
-java.sql.SQLSyntaxErrorException: Unknown database 'douzhan_blog'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:na]
-	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160) ~[spring-jdbc-6.0.14.jar:6.0.14]
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118) ~[spring-jdbc-6.0.14.jar:6.0.14]
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-6.0.14.jar:6.0.14]
-	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:332) ~[spring-jdbc-6.0.14.jar:6.0.14]
-	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.getProduct(DataSourceHealthIndicator.java:122) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doDataSourceHealthCheck(DataSourceHealthIndicator.java:105) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doHealthCheck(DataSourceHealthIndicator.java:100) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:82) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:76) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:66) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281) ~[spring-core-6.0.14.jar:6.0.14]
-	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814) ~[na:na]
-	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802) ~[na:na]
-	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472) ~[na:na]
-	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310) ~[na:na]
-	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405) ~[na:na]
-	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829) ~[na:na]
-	at java.base/jdk.internal.reflect.GeneratedMethodAccessor29.invoke(Unknown Source) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[na:na]
-	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
-	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
-	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
-	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[na:na]
-	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[na:na]
-	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[na:na]
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399) ~[na:na]
-	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+java.lang.IllegalArgumentException: Cannot set this token to trusted - use constructor which takes a GrantedAuthority list instead
+	at org.springframework.util.Assert.isTrue(Assert.java:122) ~[spring-core-6.0.14.jar:6.0.14]
+	at org.springframework.security.authentication.UsernamePasswordAuthenticationToken.setAuthenticated(UsernamePasswordAuthenticationToken.java:114) ~[spring-security-core-6.0.8.jar:6.0.8]
+	at xyz.douzhan.blog.security.JwtAuthFilter.postAuthSuccess(JwtAuthFilter.java:88) ~[classes/:na]
+	at xyz.douzhan.blog.security.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:62) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.14.jar:6.0.14]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:187) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:174) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:135) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.14.jar:6.0.14]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:187) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:174) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:135) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:187) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:174) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:135) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.14.jar:6.0.14]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:187) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:174) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:135) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.14.jar:6.0.14]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:187) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:270) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:171) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:135) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.0.8.jar:6.0.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.0.14.jar:6.0.14]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.0.14.jar:6.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.14.jar:6.0.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.14.jar:6.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.14.jar:6.0.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.14.jar:6.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.14.jar:6.0.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.14.jar:6.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.14.jar:6.0.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.14.jar:6.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
-11:02:14:737  WARN 12880 --- [RMI TCP Connection(2)-10.4.37.55] o.s.b.a.jdbc.DataSourceHealthIndicator   : DataSource health check failed
-
-org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84) ~[spring-jdbc-6.0.14.jar:6.0.14]
-	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:332) ~[spring-jdbc-6.0.14.jar:6.0.14]
-	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.getProduct(DataSourceHealthIndicator.java:122) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doDataSourceHealthCheck(DataSourceHealthIndicator.java:105) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doHealthCheck(DataSourceHealthIndicator.java:100) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:82) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:76) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:66) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281) ~[spring-core-6.0.14.jar:6.0.14]
-	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97) ~[spring-boot-actuator-3.0.13.jar:3.0.13]
-	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814) ~[na:na]
-	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802) ~[na:na]
-	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472) ~[na:na]
-	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310) ~[na:na]
-	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405) ~[na:na]
-	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829) ~[na:na]
-	at java.base/jdk.internal.reflect.GeneratedMethodAccessor29.invoke(Unknown Source) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[na:na]
-	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
-	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
-	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
-	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[na:na]
-	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[na:na]
-	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[na:na]
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399) ~[na:na]
-	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'douzhan_blog'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188) ~[mysql-connector-j-8.0.33.jar:8.0.33]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:na]
-	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160) ~[spring-jdbc-6.0.14.jar:6.0.14]
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118) ~[spring-jdbc-6.0.14.jar:6.0.14]
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-6.0.14.jar:6.0.14]
-	... 47 common frames omitted
-
-11:03:02:138  INFO 14576 --- [main] xyz.douzhan.blog.BlogApplication      : Starting BlogApplication using Java 17.0.7 with PID 14576 (D:\Programming\Project\Java\douzhan-blog\douzhan-blog-service\target\classes started by Chang in D:\Programming\Project\Java\douzhan-blog)
-11:03:02:139 DEBUG 14576 --- [main] xyz.douzhan.blog.BlogApplication      : Running with Spring Boot v3.0.13, Spring v6.0.14
-11:03:02:139  INFO 14576 --- [main] xyz.douzhan.blog.BlogApplication      : The following 3 profiles are active: "devDB", "devCustom", "dev"
-11:03:02:670  WARN 14576 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[xyz.douzhan.blog]' package. Please check your configuration.
-11:03:02:923  INFO 14576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8280 (http)
-11:03:02:929  INFO 14576 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-11:03:02:929  INFO 14576 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-11:03:02:989  INFO 14576 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-11:03:02:989  INFO 14576 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 825 ms
-11:03:03:215  INFO 14576 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-11:03:03:823  INFO 14576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8280 (http) with context path ''
-11:03:03:832  INFO 14576 --- [main] xyz.douzhan.blog.BlogApplication      : Started BlogApplication in 1.978 seconds (process running for 2.364)
-11:03:04:159  INFO 14576 --- [RMI TCP Connection(2)-10.4.37.55] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-11:03:04:160  INFO 14576 --- [RMI TCP Connection(2)-10.4.37.55] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-11:03:04:161  INFO 14576 --- [RMI TCP Connection(2)-10.4.37.55] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-11:03:04:162  INFO 14576 --- [RMI TCP Connection(1)-10.4.37.55] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-11:03:04:321  INFO 14576 --- [RMI TCP Connection(1)-10.4.37.55] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4accd17f
-11:03:04:326  INFO 14576 --- [RMI TCP Connection(1)-10.4.37.55] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-11:03:41:368  INFO 14576 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-11:03:41:384  INFO 14576 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+00:02:36:622 ERROR 7684 --- [http-nio-8888-exec-5] xyz.douzhan.blog.config.SecurityConfig   : Full authentication is required to access this resource
+00:02:36:666  INFO 7684 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+00:02:36:670  INFO 7684 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+00:02:36:672  INFO 7684 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+00:02:36:672  INFO 7684 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+00:18:46:516  INFO 18204 --- [restartedMain] xyz.douzhan.blog.BlogApplication         : Starting BlogApplication using Java 17.0.7 with PID 18204 (D:\Programming\Project\Java\douzhan-blog\douzhan-blog-service\target\classes started by Chang in D:\Programming\Project\Java\douzhan-blog)
+00:18:46:517 DEBUG 18204 --- [restartedMain] xyz.douzhan.blog.BlogApplication         : Running with Spring Boot v3.0.13, Spring v6.0.14
+00:18:46:517  INFO 18204 --- [restartedMain] xyz.douzhan.blog.BlogApplication         : The following 3 profiles are active: "devDB", "devCustom", "dev"
+00:18:46:550  INFO 18204 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+00:18:46:550  INFO 18204 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+00:18:47:355  INFO 18204 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+00:18:47:357  INFO 18204 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:18:47:386  INFO 18204 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaceinterfaces.
+00:18:47:911  INFO 18204 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+00:18:47:919  INFO 18204 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+00:18:47:919  INFO 18204 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+00:18:47:968  INFO 18204 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+00:18:47:968  INFO 18204 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1417 ms
+00:18:48:736  INFO 18204 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+00:18:49:337  INFO 18204 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@f48553e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a3730d6, org.springframework.security.web.context.SecurityContextHolderFilter@1474a56, org.springframework.security.web.header.HeaderWriterFilter@7154f5bc, xyz.douzhan.blog.security.JwtAuthFilter@25bbb9e2, org.springframework.security.web.authentication.logout.LogoutFilter@2cc41803, xyz.douzhan.blog.security.MyUsernamePasswordFilter@68868e55, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20c0aa85, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19e9a612, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@252ad7de, org.springframework.security.web.session.SessionManagementFilter@5568b55e, org.springframework.security.web.access.ExceptionTranslationFilter@7fdb0d10, org.springframework.security.web.access.intercept.AuthorizationFilter@6ffb562f]
+00:18:49:339  WARN 18204 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/static/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+00:18:49:339  INFO 18204 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/static/**']
+00:18:49:611  INFO 18204 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+00:18:49:666  INFO 18204 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+00:18:49:678  INFO 18204 --- [restartedMain] xyz.douzhan.blog.BlogApplication         : Started BlogApplication in 3.48 seconds (process running for 4.09)
+00:18:49:820  INFO 18204 --- [RMI TCP Connection(1)-192.168.15.81] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:18:49:821  INFO 18204 --- [RMI TCP Connection(1)-192.168.15.81] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+00:18:49:822  INFO 18204 --- [RMI TCP Connection(1)-192.168.15.81] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+00:18:49:893  INFO 18204 --- [RMI TCP Connection(2)-192.168.15.81] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+00:18:49:990  INFO 18204 --- [RMI TCP Connection(2)-192.168.15.81] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+00:19:09:233  WARN 18204 --- [http-nio-8888-exec-2] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/blog/user/logout' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+00:19:21:785 DEBUG 18204 --- [http-nio-8888-exec-2] x.d.blog.mapper.UserMapper.selectById    : ==>  Preparing: SELECT id,nickname,username,password,qq,email,github,avatar,motto,description FROM user WHERE id=?
+00:19:21:888 DEBUG 18204 --- [http-nio-8888-exec-2] x.d.blog.mapper.UserMapper.selectById    : ==> Parameters: 1(Byte)
+00:19:21:978 DEBUG 18204 --- [http-nio-8888-exec-2] x.d.blog.mapper.UserMapper.selectById    : <==      Total: 1
+00:19:39:591 DEBUG 18204 --- [http-nio-8888-exec-2] x.d.blog.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,nickname,username,password,qq,email,github,avatar,motto,description FROM user WHERE (username = ?)
+00:19:39:593 DEBUG 18204 --- [http-nio-8888-exec-2] x.d.blog.mapper.UserMapper.selectList    : ==> Parameters: admin(String)
+00:19:39:598 DEBUG 18204 --- [http-nio-8888-exec-2] x.d.blog.mapper.UserMapper.selectList    : <==      Total: 1
+00:20:07:599  INFO 18204 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+00:20:07:605  INFO 18204 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+00:20:07:608  INFO 18204 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+00:20:07:608  INFO 18204 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

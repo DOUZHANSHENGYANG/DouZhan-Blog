@@ -1,6 +1,5 @@
 package xyz.douzhan.blog.service.impl;
 
-import xyz.douzhan.blog.dto.LoginDto;
 import xyz.douzhan.blog.po.User;
 import xyz.douzhan.blog.service.UserService;
 import xyz.douzhan.blog.mapper.UserMapper;
@@ -18,13 +17,5 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
-    /**
-     * 登录
-     *
-     * @param loginDto
-     */
-    @Override
-    public void loginAuth(LoginDto loginDto) {
 
-    }
 }
